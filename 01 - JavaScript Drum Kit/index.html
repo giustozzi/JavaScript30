@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <title>Practacing JS with Drum Kit</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Heebo|Saira+Stencil+One&display=swap" rel="stylesheet">
 </head>
 <body>
-
-// Access to key code http://keycode.info/
-
   <div class="keys">
+    <h1>🥁<br>Play now for free</h1>
     <div data-key="65" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
@@ -59,6 +58,7 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  // Tip:  key code http://keycode.info/
   window.addEventListener('keydown', function(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
